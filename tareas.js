@@ -6,7 +6,7 @@ let archivoTareas = {
     leer: function () {
         return JSON.parse(fs.readFileSync(this.archivo, 'utf-8'));
     },
-    escribirJSON: function(arrayTareas){
+    JSONescribir: function(arrayTareas){
 
         fs.writeFileSync(this.archivo, JSON.stringify(arrayTareas, null, 2))
     },
@@ -31,7 +31,6 @@ let archivoTareas = {
                 console.log(i + '. ' + tarea.titulo + ' - ' + tarea.estado);
             })
     }
-
 }
 
 module.exports = archivoTareas;
